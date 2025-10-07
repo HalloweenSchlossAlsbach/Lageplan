@@ -1,12 +1,12 @@
-/* ### NEU: Einbindung deiner eigenen Schriftart ### */
+/* ### GEÄNDERT: Pfad zur Schriftart angepasst ### */
 @font-face {
     font-family: 'HalloweenSchrift'; /* Gib deiner Schrift einen Namen */
-    src: url('fonts/HalloweenSchrift.otf') format('opentype'); /* Passe den Dateinamen an */
+    src: url('HalloweenSchrift.otf') format('opentype'); /* Passe den Dateinamen an */
     font-weight: normal;
     font-style: normal;
 }
 
-/* ### GEÄNDERT: Farbschema und Schriftarten ### */
+/* Farbschema und Schriftarten */
 :root {
     --background-color: #000000; /* Schwarz */
     --text-color: #f0f0f0;
@@ -16,7 +16,7 @@
     --font-body: 'Roboto', sans-serif;
 }
 
-/* Grundlegende Stile (unverändert) */
+/* Grundlegende Stile */
 body {
     margin: 0;
     font-family: var(--font-body);
@@ -63,7 +63,7 @@ main h2 {
     margin-bottom: 20px;
 }
 
-/* Stil für den Lageplan (unverändert) */
+/* Stil für den Lageplan */
 .site-plan {
     max-width: 100%;
     height: auto;
