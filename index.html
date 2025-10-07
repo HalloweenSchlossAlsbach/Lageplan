@@ -27,7 +27,7 @@
             <h2>Lageplan</h2>
             <picture>
                 <source media="(min-width: 1px) and (not (prefers-reduced-data))" srcset="Lageplan_full.png">
-                <img src="Lageplan_low.png" alt="Lageplan des Veranstaltungsgeländes" class="site-plan">
+                <img src="Lageplan_low.png" alt="Lageplan des Veranstaltungsgeländes" class="site-plan" id="site-plan-img">
             </picture>
         </main>
 
@@ -65,9 +65,7 @@
             <p>Folge uns!</p>
             <div class="social-links">
                 <a href="https://www.instagram.com/halloween.schlossalsbach/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                
                 <a href="https://www.tiktok.com/@halloweenschlossa" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                
                 <a href="https://www.facebook.com/profile.php?id=61557646284656" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             </div>
         </footer>
@@ -81,6 +79,10 @@
                 <img src="Speisekarte_low.png" alt="Speisekarte" class="menu-image">
             </picture>
         </div>
+    </div>
+    
+    <div id="plan-zoom-overlay" class="overlay">
+         <img src="Lageplan_full.png" alt="Vergrößerter Lageplan" class="zoom-image">
     </div>
 
     <script src="script.js"></script>
