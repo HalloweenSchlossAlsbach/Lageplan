@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Info Dieburg</title>
+    <title>Halloween Schloss Alsbach - Info</title>
     
     <link rel="stylesheet" href="style.css">
     
@@ -25,8 +25,34 @@
 
         <main>
             <h2>Lageplan</h2>
-            <img src="lageplan.png" alt="Lageplan des Veranstaltungsgeländes" class="site-plan">
+            <div class="pdf-container">
+                <iframe src="Lageplan.pdf" class="site-plan-pdf" title="Lageplan des Veranstaltungsgeländes"></iframe>
+            </div>
         </main>
+
+        <details class="info-details">
+            <summary>
+                <i class="fa-solid fa-address-book"></i> Kontakt & Anfahrt
+            </summary>
+            <ul class="contact-list">
+                <li>
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+4915251036820">(+49) 152 510 368 20</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:halloween@schlossalsbach.de">halloween@schlossalsbach.de</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-globe"></i>
+                    <a href="https://www.halloweenaufschlossalsbach.de" target="_blank">www.halloweenaufschlossalsbach.de</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <a href="https://www.google.com/maps/search/?api=1&query=Zum+Schloss,64665+Alsbach-Hähnlein" target="_blank">Zum Schloss, 64665 Alsbach-Hähnlein</a>
+                </li>
+            </ul>
+        </details>
 
         <div class="actions">
             <button id="menu-btn" class="action-button">
@@ -37,9 +63,9 @@
         <footer>
             <p>Folge uns!</p>
             <div class="social-links">
-                <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.instagram.com/halloween.schlossalsbach/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@halloweenschlossalsbach" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/HalloweenAufSchlossAlsbach" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
             </div>
         </footer>
     </div>
@@ -47,7 +73,7 @@
     <div id="menu-overlay" class="overlay">
         <span class="close-btn">&times;</span>
         <div class="overlay-content">
-            <iframe src="speisekarte.pdf" width="100%" height="100%"></iframe>
+            <iframe src="Speisekarte.pdf" width="100%" height="100%"></iframe>
         </div>
     </div>
 
