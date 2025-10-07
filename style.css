@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Deine Schriftart';
-    src: url('DeineSchriftart.otf') format('opentype');
+    font-family: 'HalloweenSchrift';
+    src: url('HalloweenSchrift.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -10,7 +10,7 @@
     --text-color: #f0f0f0;
     --primary-color: #ff0000;
     --container-bg: #1a1a1a;
-    --font-heading: 'Deine Schriftart', sans-serif;
+    --font-heading: 'HalloweenSchrift', sans-serif;
     --font-body: 'Roboto', sans-serif;
 }
 
