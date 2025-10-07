@@ -1,17 +1,17 @@
 // Name des Caches (Versionsnummer kann bei Änderungen erhöht werden)
-const CACHE_NAME = 'event-info-cache-v1';
+const CACHE_NAME = 'event-info-cache-v2'; // Version erhöht wegen neuer Dateien
 
-// ### ÄNDERUNG HIER ###
+// ### GEÄNDERT: Dateinamen der PDFs aktualisiert ###
 // Liste der Dateien, die für den Offline-Betrieb gespeichert werden sollen.
-// Alle Pfade müssen mit dem Namen des Repositorys beginnen.
 const urlsToCache = [
     '/Lageplan/',
     '/Lageplan/index.html',
     '/Lageplan/style.css',
     '/Lageplan/script.js',
-    '/Lageplan/lageplan.png',
-    '/Lageplan/speisekarte.pdf',
+    '/Lageplan/Lageplan.pdf',   // PNG durch PDF ersetzt
+    '/Lageplan/Speisekarte.pdf', // korrekte Großschreibung
     '/Lageplan/manifest.json',
+    '/Lageplan/DeineSchriftart.otf', // Wichtig: Auch die Schriftart cachen!
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css'
 ];
 
@@ -31,11 +31,9 @@ self.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request)
             .then(response => {
-                // Wenn die Anfrage im Cache gefunden wird, wird sie von dort geladen
                 if (response) {
                     return response;
                 }
-                // Ansonsten wird sie normal aus dem Netzwerk geladen
                 return fetch(event.request);
             })
     );
