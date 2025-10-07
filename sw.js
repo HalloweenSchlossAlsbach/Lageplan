@@ -1,17 +1,16 @@
 // Name des Caches (Versionsnummer kann bei Änderungen erhöht werden)
-const CACHE_NAME = 'event-info-cache-v2'; // Version erhöht wegen neuer Dateien
+const CACHE_NAME = 'event-info-cache-v3'; // Version erhöht
 
-// ### GEÄNDERT: Dateinamen der PDFs aktualisiert ###
-// Liste der Dateien, die für den Offline-Betrieb gespeichert werden sollen.
+// ### GEÄNDERT: Dateinamen von PDF zu PNG geändert ###
 const urlsToCache = [
     '/Lageplan/',
     '/Lageplan/index.html',
     '/Lageplan/style.css',
     '/Lageplan/script.js',
-    '/Lageplan/Lageplan.pdf',   // PNG durch PDF ersetzt
-    '/Lageplan/Speisekarte.pdf', // korrekte Großschreibung
+    '/Lageplan/Lageplan.png',   // Zurück zu PNG
+    '/Lageplan/Speisekarte.png', // Zurück zu PNG
     '/Lageplan/manifest.json',
-    '/Lageplan/DeineSchriftart.otf', // Wichtig: Auch die Schriftart cachen!
+    '/Lageplan/DeineSchriftart.otf',
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css'
 ];
 
