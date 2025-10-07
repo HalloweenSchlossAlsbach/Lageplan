@@ -1,7 +1,6 @@
-/* ### GEÄNDERT: Korrekter Dateiname und Name für die Schriftart ### */
 @font-face {
-    font-family: 'Halloween Schrift'; /* Name für die Verwendung in CSS */
-    src: url('HalloweenSchrift.otf') format('opentype'); /* Korrekter Dateiname */
+    font-family: 'Halloween Schrift';
+    src: url('HalloweenSchrift.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -11,21 +10,27 @@
     --text-color: #f0f0f0;
     --primary-color: #ff0000;
     --container-bg: #1a1a1a;
-    /* ### GEÄNDERT: Verwendet jetzt den korrekten Schriftart-Namen ### */
-    --font-heading: 'Halloween Schrift', sans-serif; 
+    --font-heading: 'Halloween Schrift', sans-serif;
     --font-body: 'Roboto', sans-serif;
 }
 
-body {
+/* ### GEÄNDERT: Kein horizontales Scrollen mehr ### */
+html, body {
     margin: 0;
-    font-family: var(--font-body);
+    padding: 0;
     background-color: var(--background-color);
+    width: 100%;
+    overflow-x: hidden; 
+}
+
+body {
+    font-family: var(--font-body);
     color: var(--text-color);
     display: flex;
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
-    padding: 20px;
+    padding: 15px; /* Abstand oben reduziert */
     box-sizing: border-box;
 }
 
@@ -34,23 +39,26 @@ body {
     max-width: 800px;
     background-color: var(--container-bg);
     border-radius: 15px;
-    padding: 25px;
+    padding: 20px;
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
     text-align: center;
     border: 1px solid #333;
 }
 
+header {
+    margin-bottom: 15px; /* Abstand reduziert */
+}
 header h1 {
     font-family: var(--font-heading);
     color: var(--primary-color);
-    font-size: 3.5rem;
+    /* ### GEÄNDERT: Responsive Schriftgröße ### */
+    font-size: clamp(2.8rem, 10vw, 4rem);
     margin: 0;
     letter-spacing: 2px;
 }
-
 header p {
     font-size: 1.1rem;
-    margin-top: -10px;
+    margin: -5px 0 0 0; /* Abstand reduziert */
     opacity: 0.8;
 }
 
@@ -58,7 +66,7 @@ main h2 {
     border-bottom: 2px solid var(--primary-color);
     display: inline-block;
     padding-bottom: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .site-plan {
@@ -66,9 +74,11 @@ main h2 {
     height: auto;
     border-radius: 10px;
     border: 3px solid #444;
+    cursor: zoom-in; /* Zeigt dem Nutzer, dass man klicken kann */
 }
 
-.info-details { margin: 30px 0; text-align: left; border: 2px solid #444; border-radius: 10px; }
+/* Unveränderte Stile ... */
+.info-details { margin: 25px 0; text-align: left; border: 2px solid #444; border-radius: 10px; }
 .info-details summary { padding: 15px; font-size: 1.2rem; font-weight: bold; cursor: pointer; background-color: #2b2b2b; border-radius: 8px; list-style: none; transition: background-color 0.2s; }
 .info-details summary:hover { background-color: #3c3c3c; }
 .info-details summary i { color: var(--primary-color); margin-right: 15px; }
@@ -78,15 +88,27 @@ main h2 {
 .contact-list i { font-size: 1.2rem; width: 30px; text-align: center; margin-right: 15px; }
 .contact-list a { color: var(--text-color); text-decoration: none; border-bottom: 1px dashed #666; transition: color 0.2s, border-bottom-color 0.2s; }
 .contact-list a:hover { color: var(--primary-color); border-bottom-color: var(--primary-color); }
-.actions { margin: 30px 0; }
+.actions { margin: 25px 0; }
 .action-button { background-color: var(--primary-color); color: var(--text-color); border: none; padding: 15px 30px; font-size: 1.2rem; font-weight: bold; border-radius: 50px; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
 .action-button:hover { transform: scale(1.05); box-shadow: 0 0 15px var(--primary-color); }
 .action-button i { margin-right: 10px; }
-footer { margin-top: 30px; border-top: 1px solid #444; padding-top: 20px; }
+footer { margin-top: 25px; border-top: 1px solid #444; padding-top: 20px; }
 .social-links a { color: var(--primary-color); font-size: 2rem; margin: 0 15px; text-decoration: none; transition: transform 0.2s; }
 .social-links a:hover { transform: scale(1.2); }
-.overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.85); display: none; justify-content: center; align-items: center; z-index: 1000; }
+
+/* Overlay Stile */
+.overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.9); display: none; justify-content: center; align-items: center; z-index: 1000; }
 .overlay.show { display: flex; }
-.overlay-content { position: relative; width: 90%; height: 85%; max-width: 800px; background-color: var(--container-bg); border-radius: 10px; padding: 10px; box-sizing: border-box; display: flex; justify-content: center; align-items: center; }
-.menu-image { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 5px; }
-.close-btn { position: absolute; top: -15px; right: -15px; background-color: var(--primary-color); color: var(--text-color); font-size: 2rem; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; font-weight: bold; border: 2px solid var(--background-color); }
+.overlay-content { position: relative; width: 95%; height: 90%; max-width: 800px; display: flex; justify-content: center; align-items: center; }
+.menu-image { max-width: 100%; max-height: 100%; object-fit: contain; cursor: zoom-out; }
+.close-btn { position: absolute; top: 0; right: 5px; color: white; font-size: 3rem; cursor: pointer; z-index: 1001; }
+
+/* ### NEU: Stile für das Lageplan-Zoom-Overlay ### */
+#plan-zoom-overlay {
+    cursor: zoom-out;
+}
+.zoom-image {
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain;
+}
