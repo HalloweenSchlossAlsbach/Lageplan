@@ -1,6 +1,7 @@
+/* ### GEÄNDERT: Korrekter Dateiname und Name für die Schriftart ### */
 @font-face {
-    font-family: 'HalloweenSchrift';
-    src: url('HalloweenSchrift.otf') format('opentype');
+    font-family: 'Halloween Schrift'; /* Name für die Verwendung in CSS */
+    src: url('HalloweenSchrift.otf') format('opentype'); /* Korrekter Dateiname */
     font-weight: normal;
     font-style: normal;
 }
@@ -10,7 +11,8 @@
     --text-color: #f0f0f0;
     --primary-color: #ff0000;
     --container-bg: #1a1a1a;
-    --font-heading: 'HalloweenSchrift', sans-serif;
+    /* ### GEÄNDERT: Verwendet jetzt den korrekten Schriftart-Namen ### */
+    --font-heading: 'Halloween Schrift', sans-serif; 
     --font-body: 'Roboto', sans-serif;
 }
 
@@ -59,74 +61,23 @@ main h2 {
     margin-bottom: 20px;
 }
 
-/* ### NEU: Stile für den PDF-Container ### */
-.pdf-container {
-    width: 100%;
-    aspect-ratio: 4 / 3; /* Sorgt für ein gutes Seitenverhältnis */
+.site-plan {
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
     border: 3px solid #444;
-    overflow: hidden; /* Versteckt überstehende Ränder */
-}
-.site-plan-pdf {
-    width: 100%;
-    height: 100%;
-    border: none;
 }
 
-/* ### NEU: Stile für das aufklappbare Info-Feld ### */
-.info-details {
-    margin: 30px 0;
-    text-align: left;
-    border: 2px solid #444;
-    border-radius: 10px;
-}
-.info-details summary {
-    padding: 15px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-    background-color: #2b2b2b;
-    border-radius: 8px;
-    list-style: none; /* Entfernt den Standard-Pfeil */
-    transition: background-color 0.2s;
-}
-.info-details summary:hover {
-    background-color: #3c3c3c;
-}
-.info-details summary i {
-    color: var(--primary-color);
-    margin-right: 15px;
-}
-.contact-list {
-    list-style: none;
-    padding: 15px 20px;
-    margin: 0;
-}
-.contact-list li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-.contact-list li:last-child {
-    margin-bottom: 0;
-}
-.contact-list i {
-    font-size: 1.2rem;
-    width: 30px; /* Sorgt für eine saubere Ausrichtung */
-    text-align: center;
-    margin-right: 15px;
-}
-.contact-list a {
-    color: var(--text-color);
-    text-decoration: none;
-    border-bottom: 1px dashed #666;
-    transition: color 0.2s, border-bottom-color 0.2s;
-}
-.contact-list a:hover {
-    color: var(--primary-color);
-    border-bottom-color: var(--primary-color);
-}
-
+.info-details { margin: 30px 0; text-align: left; border: 2px solid #444; border-radius: 10px; }
+.info-details summary { padding: 15px; font-size: 1.2rem; font-weight: bold; cursor: pointer; background-color: #2b2b2b; border-radius: 8px; list-style: none; transition: background-color 0.2s; }
+.info-details summary:hover { background-color: #3c3c3c; }
+.info-details summary i { color: var(--primary-color); margin-right: 15px; }
+.contact-list { list-style: none; padding: 15px 20px; margin: 0; }
+.contact-list li { display: flex; align-items: center; margin-bottom: 15px; }
+.contact-list li:last-child { margin-bottom: 0; }
+.contact-list i { font-size: 1.2rem; width: 30px; text-align: center; margin-right: 15px; }
+.contact-list a { color: var(--text-color); text-decoration: none; border-bottom: 1px dashed #666; transition: color 0.2s, border-bottom-color 0.2s; }
+.contact-list a:hover { color: var(--primary-color); border-bottom-color: var(--primary-color); }
 .actions { margin: 30px 0; }
 .action-button { background-color: var(--primary-color); color: var(--text-color); border: none; padding: 15px 30px; font-size: 1.2rem; font-weight: bold; border-radius: 50px; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
 .action-button:hover { transform: scale(1.05); box-shadow: 0 0 15px var(--primary-color); }
@@ -136,6 +87,6 @@ footer { margin-top: 30px; border-top: 1px solid #444; padding-top: 20px; }
 .social-links a:hover { transform: scale(1.2); }
 .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.85); display: none; justify-content: center; align-items: center; z-index: 1000; }
 .overlay.show { display: flex; }
-.overlay-content { position: relative; width: 90%; height: 85%; max-width: 800px; background: #fff; border-radius: 10px; padding: 10px; box-sizing: border-box; }
-.overlay-content iframe { border: none; border-radius: 5px; }
+.overlay-content { position: relative; width: 90%; height: 85%; max-width: 800px; background-color: var(--container-bg); border-radius: 10px; padding: 10px; box-sizing: border-box; display: flex; justify-content: center; align-items: center; }
+.menu-image { max-width: 100%; max-height: 100%; object-fit: contain; border-radius: 5px; }
 .close-btn { position: absolute; top: -15px; right: -15px; background-color: var(--primary-color); color: var(--text-color); font-size: 2rem; width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; font-weight: bold; border: 2px solid var(--background-color); }
