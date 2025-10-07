@@ -1,11 +1,11 @@
 {
-    "name": "Event Info Dieburg",
+    "name": "Halloween Schloss Alsbach - Info",
     "short_name": "EventInfo",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#1a1a1a",
-    "theme_color": "#ff6600",
-    "description": "Alle wichtigen Informationen für Besucher des Events in Dieburg.",
+    "theme_color": "#000000",
+    "description": "Alle wichtigen Informationen für Besucher des Events.",
     "icons": [
         {
             "src": "icons/icon-192x192.png",
