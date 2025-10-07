@@ -4,38 +4,30 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuButton = document.getElementById('menu-btn');
     const menuOverlay = document.getElementById('menu-overlay');
     const closeButton = document.querySelector('.close-btn');
+    const menuImage = document.querySelector('.menu-image'); // Das Bild im Overlay
 
-    // Funktion zum Öffnen des Overlays
-    const openMenu = () => {
-        menuOverlay.classList.add('show');
-    };
+    const openMenu = () => menuOverlay.classList.add('show');
+    const closeMenu = () => menuOverlay.classList.remove('show');
 
-    // Funktion zum Schließen des Overlays
-    const closeMenu = () => {
-        menuOverlay.classList.remove('show');
-    };
-
-    // Event-Listener hinzufügen
     menuButton.addEventListener('click', openMenu);
     closeButton.addEventListener('click', closeMenu);
-
-    // Overlay schließen, wenn man daneben klickt
     menuOverlay.addEventListener('click', (event) => {
-        if (event.target === menuOverlay) {
-            closeMenu();
-        }
+        if (event.target === menuOverlay) closeMenu();
     });
+    // ### NEU: Schließt die Speisekarte bei Klick auf das Bild ###
+    if(menuImage) {
+        menuImage.addEventListener('click', closeMenu);
+    }
 
-    // --- Service Worker für Offline-Fähigkeit registrieren ---
-    if ('serviceWorker' in navigator) {
-        // ### ÄNDERUNG HIER ###
-        // Der Pfad muss den Namen deines Repositorys enthalten.
-        navigator.serviceWorker.register('/Lageplan/sw.js')
-            .then(registration => {
-                console.log('Service Worker erfolgreich registriert:', registration);
-            })
-            .catch(error => {
-                console.log('Service Worker Registrierung fehlgeschlagen:', error);
-            });
+    // --- ### NEU: Logik für den Lageplan-Zoom ### ---
+    const sitePlanImage = document.getElementById('site-plan-img');
+    const planZoomOverlay = document.getElementById('plan-zoom-overlay');
+
+    const openPlanZoom = () => planZoomOverlay.classList.add('show');
+    const closePlanZoom = () => planZoomOverlay.classList.remove('show');
+
+    if (sitePlanImage && planZoomOverlay) {
+        sitePlanImage.addEventListener('click', openPlanZoom);
+        planZoomOverlay.addEventListener('click', closePlanZoom);
     }
 });
