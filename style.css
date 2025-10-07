@@ -44,8 +44,9 @@ body {
     border: 1px solid #333;
 }
 
+/* ### GEÄNDERT: Abstand wieder vergrößert ### */
 header {
-    margin-bottom: 15px; /* ### GEÄNDERT: Abstand leicht reduziert ### */
+    margin-bottom: 25px; 
 }
 header h1 {
     font-family: var(--font-heading);
@@ -53,7 +54,6 @@ header h1 {
     font-size: clamp(2.8rem, 10vw, 4rem);
     margin: 0;
     letter-spacing: 2px;
-    /* ### NEU: Reduziert die Zeilenhöhe und damit den Abstand ### */
     line-height: 1; 
 }
 header p {
