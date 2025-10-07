@@ -29,7 +29,8 @@ body {
     justify-content: center;
     align-items: flex-start;
     min-height: 100vh;
-    padding: 15px;
+    /* ### GEÄNDERT: Abstand zum oberen Bildschirmrand stark vergrößert ### */
+    padding: 50px 15px 15px;
     box-sizing: border-box;
 }
 
@@ -38,7 +39,6 @@ body {
     max-width: 800px;
     background-color: var(--container-bg);
     border-radius: 15px;
-    /* ### GEÄNDERT: Oberen Abstand zum Seitenanfang vergrößert ### */
     padding: 30px 15px 15px;
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
     text-align: center;
@@ -58,7 +58,6 @@ header h1 {
 }
 header p {
     font-size: 1.1rem;
-    /* ### GEÄNDERT: Abstand von "Willkommen!" vergrößert ### */
     margin: 15px 0 0 0;
     opacity: 0.8;
 }
