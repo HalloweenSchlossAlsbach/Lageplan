@@ -38,15 +38,14 @@ body {
     max-width: 800px;
     background-color: var(--container-bg);
     border-radius: 15px;
-    padding: 15px; /* Seitenabstand leicht reduziert */
+    padding: 15px;
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
     text-align: center;
     border: 1px solid #333;
 }
 
-/* ### GEÄNDERT: Abstände stark reduziert ### */
 header {
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* ### GEÄNDERT: Abstand leicht reduziert ### */
 }
 header h1 {
     font-family: var(--font-heading);
@@ -54,14 +53,15 @@ header h1 {
     font-size: clamp(2.8rem, 10vw, 4rem);
     margin: 0;
     letter-spacing: 2px;
+    /* ### NEU: Reduziert die Zeilenhöhe und damit den Abstand ### */
+    line-height: 1; 
 }
 header p {
     font-size: 1.1rem;
-    margin: 5px 0 0 0; /* Minimaler Abstand nach oben */
+    margin: 5px 0 0 0;
     opacity: 0.8;
 }
 
-/* ### NEU: Stile für die Social-Media-Leiste ### */
 .social-media-bar {
     display: flex;
     justify-content: center;
@@ -81,8 +81,8 @@ header p {
 }
 .social-links a {
     color: var(--primary-color);
-    font-size: 1.8rem; /* Icons leicht verkleinert */
-    margin: 0 10px; /* Abstand zwischen Icons angepasst */
+    font-size: 1.8rem;
+    margin: 0 10px;
     text-decoration: none;
     transition: transform 0.2s;
 }
