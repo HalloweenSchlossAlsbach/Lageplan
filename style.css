@@ -1,14 +1,22 @@
-/* Definition von Farben und Schriftarten für einfache Anpassung */
+/* ### NEU: Einbindung deiner eigenen Schriftart ### */
+@font-face {
+    font-family: 'HalloweenSchrift'; /* Gib deiner Schrift einen Namen */
+    src: url('fonts/HalloweenSchrift.otf') format('opentype'); /* Passe den Dateinamen an */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* ### GEÄNDERT: Farbschema und Schriftarten ### */
 :root {
-    --background-color: #1a1a1a;
+    --background-color: #000000; /* Schwarz */
     --text-color: #f0f0f0;
-    --primary-color: #ff6600; /* Ein kräftiges Orange */
-    --container-bg: #2b2b2b;
-    --font-heading: 'Creepster', cursive;
+    --primary-color: #ff0000; /* Ein kräftiges Rot */
+    --container-bg: #1a1a1a;  /* Ein sehr dunkles Grau für den Kontrast */
+    --font-heading: 'Deine Schriftart', sans-serif; /* Deine neue Schriftart */
     --font-body: 'Roboto', sans-serif;
 }
 
-/* Grundlegende Stile */
+/* Grundlegende Stile (unverändert) */
 body {
     margin: 0;
     font-family: var(--font-body);
@@ -28,10 +36,12 @@ body {
     background-color: var(--container-bg);
     border-radius: 15px;
     padding: 25px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3); /* Roter Schatten */
     text-align: center;
+    border: 1px solid #333;
 }
 
+/* Header mit neuer Schriftart und Farbe */
 header h1 {
     font-family: var(--font-heading);
     color: var(--primary-color);
@@ -53,7 +63,7 @@ main h2 {
     margin-bottom: 20px;
 }
 
-/* Stil für den Lageplan */
+/* Stil für den Lageplan (unverändert) */
 .site-plan {
     max-width: 100%;
     height: auto;
@@ -61,14 +71,14 @@ main h2 {
     border: 3px solid #444;
 }
 
-/* Stil für Buttons */
+/* Stil für Buttons im neuen Farbschema */
 .actions {
     margin: 30px 0;
 }
 
 .action-button {
     background-color: var(--primary-color);
-    color: var(--background-color);
+    color: var(--text-color); /* Heller Text auf rotem Button */
     border: none;
     padding: 15px 30px;
     font-size: 1.2rem;
@@ -87,7 +97,7 @@ main h2 {
     margin-right: 10px;
 }
 
-/* Stil für die Social Media Links */
+/* Stil für die Social Media Links im neuen Farbschema */
 footer {
     margin-top: 30px;
     border-top: 1px solid #444;
@@ -106,7 +116,7 @@ footer {
     transform: scale(1.2);
 }
 
-/* Stile für das Speisekarten-Overlay */
+/* Stile für das Speisekarten-Overlay (Schließ-Button angepasst) */
 .overlay {
     position: fixed;
     top: 0;
@@ -114,14 +124,14 @@ footer {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.85);
-    display: none; /* Standardmäßig unsichtbar */
+    display: none;
     justify-content: center;
     align-items: center;
     z-index: 1000;
 }
 
 .overlay.show {
-    display: flex; /* Sichtbar machen */
+    display: flex;
 }
 
 .overlay-content {
@@ -145,7 +155,7 @@ footer {
     top: -15px;
     right: -15px;
     background-color: var(--primary-color);
-    color: var(--background-color);
+    color: var(--text-color); /* Heller Text auf rotem Button */
     font-size: 2rem;
     width: 40px;
     height: 40px;
