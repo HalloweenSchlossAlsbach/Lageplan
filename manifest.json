@@ -1,0 +1,21 @@
+{
+    "name": "Event Info Dieburg",
+    "short_name": "EventInfo",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#1a1a1a",
+    "theme_color": "#ff6600",
+    "description": "Alle wichtigen Informationen für Besucher des Events in Dieburg.",
+    "icons": [
+        {
+            "src": "icons/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
