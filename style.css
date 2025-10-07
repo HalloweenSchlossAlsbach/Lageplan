@@ -38,13 +38,13 @@ body {
     max-width: 800px;
     background-color: var(--container-bg);
     border-radius: 15px;
-    padding: 15px;
+    /* ### GEÄNDERT: Oberen Abstand zum Seitenanfang vergrößert ### */
+    padding: 30px 15px 15px;
     box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
     text-align: center;
     border: 1px solid #333;
 }
 
-/* ### GEÄNDERT: Abstand wieder vergrößert ### */
 header {
     margin-bottom: 25px; 
 }
@@ -58,7 +58,8 @@ header h1 {
 }
 header p {
     font-size: 1.1rem;
-    margin: 5px 0 0 0;
+    /* ### GEÄNDERT: Abstand von "Willkommen!" vergrößert ### */
+    margin: 15px 0 0 0;
     opacity: 0.8;
 }
 
@@ -114,7 +115,7 @@ main h2 {
 .info-details summary { padding: 15px; font-size: 1.2rem; font-weight: bold; cursor: pointer; background-color: #2b2b2b; border-radius: 8px; list-style: none; transition: background-color 0.2s; }
 .info-details summary:hover { background-color: #3c3c3c; }
 .info-details summary i { color: var(--primary-color); margin-right: 15px; }
-.contact-list { list-style: none; padding: 15px 20px; margin: 0; }
+.contact-list { list-stle: none; padding: 15px 20px; margin: 0; }
 .contact-list li { display: flex; align-items: center; margin-bottom: 15px; }
 .contact-list li:last-child { margin-bottom: 0; }
 .contact-list i { font-size: 1.2rem; width: 30px; text-align: center; margin-right: 15px; }
