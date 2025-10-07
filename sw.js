@@ -1,16 +1,16 @@
 // Name des Caches (Versionsnummer kann bei Änderungen erhöht werden)
-const CACHE_NAME = 'event-info-cache-v3'; // Version erhöht
+const CACHE_NAME = 'event-info-cache-v3';
 
-// ### GEÄNDERT: Dateinamen von PDF zu PNG geändert ###
+// ### GEÄNDERT: Korrekter Dateiname der Schriftart ###
 const urlsToCache = [
     '/Lageplan/',
     '/Lageplan/index.html',
     '/Lageplan/style.css',
     '/Lageplan/script.js',
-    '/Lageplan/Lageplan.png',   // Zurück zu PNG
-    '/Lageplan/Speisekarte.png', // Zurück zu PNG
+    '/Lageplan/Lageplan.png',
+    '/Lageplan/Speisekarte.png',
     '/Lageplan/manifest.json',
-    '/Lageplan/DeineSchriftart.otf',
+    '/Lageplan/HalloweenSchrift.otf', // Korrekter Dateiname
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css'
 ];
 
