@@ -11,66 +11,50 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="container">
-        <header>
-            <h1>Willkommen!</h1>
-            <p>Alle wichtigen Infos auf einen Blick.</p>
-        </header>
+    <header>
+        <img src="logo.png" alt="Halloween Schloss Alsbach Logo" class="header-logo">
+        <h1>Willkommen!</h1>
+    </header>
 
-        <div class="social-media-bar">
-            <p class="follow-text">Folge uns!</p>
-            <div class="social-links">
-                <a href="https://www.instagram.com/halloween.schlossalsbach/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@halloweenschlossa" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=61557646284656" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            </div>
-        </div>
-
-        <main>
+    <main>
+        <section class="view-section">
             <h2>Lageplan</h2>
+            <p>Tippe auf den Plan, um ihn zu vergrößern.</p>
             <picture>
                 <source media="(min-width: 1px) and (not (prefers-reduced-data))" srcset="Lageplan_full.png">
                 <img src="Lageplan_low.png" alt="Lageplan des Veranstaltungsgeländes" class="site-plan" id="site-plan-img">
             </picture>
-        </main>
+        </section>
 
-        <div class="actions">
-            <button id="menu-btn" class="action-button">
-                <i class="fa-solid fa-utensils"></i> Speisekarte
-            </button>
-        </div>
+        <section class="view-section">
+            <button id="menu-btn" class="action-button">Speisekarte</button>
+        </section>
         
-        <details class="info-details">
-            <summary>
-                <i class="fa-solid fa-address-book"></i> Kontakt & Anfahrt
-            </summary>
-            <ul class="contact-list">
-                <li>
-                    <i class="fa-solid fa-phone"></i>
-                    <a href="tel:+4915251036820">(+49) 152 510 368 20</a>
-                </li>
-                <li>
-                    <i class="fa-solid fa-envelope"></i>
-                    <a href="mailto:halloween@schlossalsbach.de">halloween@schlossalsbach.de</a>
-                </li>
-                <li>
-                    <i class="fa-solid fa-globe"></i>
-                    <a href="https://www.halloweenaufschlossalsbach.de" target="_blank">www.halloweenaufschlossalsbach.de</a>
-                </li>
-                <li>
-                    <i class="fa-solid fa-map-location-dot"></i>
-                    <a href="https://www.google.com/maps/search/?api=1&query=Zum+Schloss,64665+Alsbach-Hähnlein" target="_blank">Zum Schloss, 64665 Alsbach-Hähnlein</a>
-                </li>
-            </ul>
-        </details>
+        <section class="view-section">
+            <details class="info-details">
+                <summary>Kontakt & Anfahrt</summary>
+                <ul class="contact-list">
+                    <li><i class="fa-solid fa-phone"></i><a href="tel:+4915251036820">(+49) 152 510 368 20</a></li>
+                    <li><i class="fa-solid fa-envelope"></i><a href="mailto:halloween@schlossalsbach.de">halloween@schlossalsbach.de</a></li>
+                    <li><i class="fa-solid fa-globe"></i><a href="https://www.halloweenaufschlossalsbach.de" target="_blank">Webseite besuchen</a></li>
+                    <li><i class="fa-solid fa-map-location-dot"></i><a href="https://www.google.com/maps/search/?api=1&query=Zum+Schloss,64665+Alsbach-Hähnlein" target="_blank">Zum Schloss, 64665 Alsbach-Hähnlein</a></li>
+                </ul>
+            </details>
+        </section>
+    </main>
 
-    </div>
+    <footer>
+        <h3>Folge uns!</h3>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/halloween.schlossalsbach/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@halloweenschlossa" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61557646284656" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+    </footer>
 
     <div id="menu-overlay" class="overlay">
         <span class="close-btn">×</span>
