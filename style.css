@@ -31,7 +31,6 @@ h1, h2, h3 {
     color: #b30000;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     margin: 0;
-    /* ### NEU: Zeichenabstand für bessere Lesbarkeit ### */
     letter-spacing: 3px;
 }
 
@@ -76,12 +75,18 @@ p { margin-bottom: 1em; font-size: 1.1em; }
     cursor: pointer;
     width: 100%;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    /* ### NEU: Zeichenabstand für bessere Lesbarkeit ### */
     letter-spacing: 2px;
 }
 .action-button:hover {
     background-color: #ff0000;
     transform: translateY(-2px);
+}
+
+/* ### NEU: Stellt sicher, dass Links im Button-Stil korrekt angezeigt werden ### */
+a.action-button {
+    display: block;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 
 footer {
