@@ -1,7 +1,7 @@
-/* ### KOMPLETT NEUES STYLING BASIEREND AUF DEINER VORLAGE ### */
+/* ### STYLING BASIEREND AUF DEINER VORLAGE ### */
 
 @font-face {
-    font-family: 'Halloween Schrift'; /* Name der Schriftart beibehalten */
+    font-family: 'Halloween Schrift';
     src: url('HalloweenSchrift.otf') format('opentype');
 }
 
@@ -66,9 +66,11 @@ p { margin-bottom: 1em; font-size: 1.1em; }
 
 .action-button {
     background-color: #b30000;
-    color: white;
+    /* ### GEÄNDERT: Schriftfarbe auf Schwarz ### */
+    color: #000; 
     font-family: 'Halloween Schrift', cursive;
     font-size: 1.8em;
+    font-weight: bold; /* Sorgt für bessere Lesbarkeit */
     border: none;
     padding: 12px 20px;
     border-radius: 8px;
@@ -82,20 +84,26 @@ p { margin-bottom: 1em; font-size: 1.1em; }
 }
 
 .info-details {
-    padding: 0; /* Padding wird von .view-section übernommen */
+    padding: 0;
     border: none;
     box-shadow: none;
     background: none;
 }
 .info-details summary {
-    font-family: 'Halloween Schrift', cursive;
-    color: #b30000;
-    font-size: 2.2em;
+    /* ### GEÄNDERT: Schriftart auf Standard-Text ### */
+    font-family: 'Open Sans', sans-serif;
+    color: #e0e0e0; /* Standard-Textfarbe */
+    font-size: 1.5em; /* Angepasste Größe */
+    font-weight: bold;
     cursor: pointer;
-    list-style: none; /* Pfeil entfernen */
+    list-style: none;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 8px;
+    background-color: #333;
 }
 .info-details summary::-webkit-details-marker {
-    display: none; /* Pfeil in Chrome/Safari entfernen */
+    display: none;
 }
 .contact-list {
     list-style: none;
@@ -157,7 +165,6 @@ footer {
     box-shadow: 0 5px 15px rgba(179, 0, 0, 0.7);
 }
 
-/* Overlay Stile angepasst an das neue Design */
 .overlay {
     position: fixed;
     top: 0;
