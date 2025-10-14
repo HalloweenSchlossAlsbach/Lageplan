@@ -26,8 +26,6 @@ header {
     margin-bottom: 10px;
 }
 
-/* ### GEÄNDERT: Zeichenabstand für Halloween-Schrift erhöht ### */
-/* Gilt für H1, H2 und die H3 im Footer */
 h1, h2, footer h3 {
     font-family: 'Halloween Schrift', cursive;
     color: #cc0001;
@@ -38,7 +36,7 @@ h1, h2, footer h3 {
 
 h1 { font-size: 2.8em; line-height: 1.1; }
 h2 { font-size: 2.2em; margin-top: 10px; margin-bottom: 20px; }
-footer h3 { font-size: 1.8em; } /* H3 im Footer behält das alte Styling */
+footer h3 { font-size: 1.8em; }
 
 main {
     max-width: 600px;
@@ -91,14 +89,13 @@ a.action-button {
     box-sizing: border-box;
 }
 
-/* ### NEU: Styling für die Zwischenüberschriften (Speisen, Getränke, Tage) ### */
 .text-content-section h3 {
     font-family: 'Open Sans', sans-serif;
     color: #e0e0e0;
-    font-size: 1.6em; /* Größer als Text, kleiner als H2 */
+    font-size: 1.6em;
     font-weight: bold;
-    text-shadow: none; /* Keinen Schatten für bessere Lesbarkeit */
-    letter-spacing: normal; /* Normaler Zeichenabstand */
+    text-shadow: none;
+    letter-spacing: normal;
     margin-bottom: 15px;
     border-bottom: 1px solid #555;
     padding-bottom: 8px;
@@ -123,12 +120,14 @@ a.action-button {
     font-weight: bold;
     white-space: nowrap;
 }
+
+/* ### GEÄNDERT: Stil für den Angebots-Text ### */
 .text-content-section .special-offer {
-    justify-content: center;
-    font-style: italic;
-    font-size: 0.9em;
-    color: #ccc;
-    padding-top: 10px;
+    justify-content: center; /* Text bleibt zentriert */
+    font-style: normal; /* Keine Kursivschrift mehr */
+    font-size: 1.1em; /* Gleiche Größe wie andere Einträge */
+    color: #e0e0e0; /* Gleiche Farbe wie andere Einträge */
+    font-weight: bold; /* Fett gedruckt zur Hervorhebung */
 }
 
 footer {
