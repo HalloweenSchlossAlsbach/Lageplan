@@ -1,18 +1,19 @@
-// Name des Caches (Versionsnummer kann bei Änderungen erhöht werden)
-const CACHE_NAME = 'event-info-cache-v4'; // Version erhöht wegen neuer Bilddateien
+// ### GEÄNDERT: Cache-Version erhöht ###
+const CACHE_NAME = 'event-info-cache-v5';
 
-// ### GEÄNDERT: Alle vier Bilddateien in den Cache aufnehmen ###
+// ### GEÄNDERT: Alle Pfade auf "Event-Guide" aktualisiert ###
 const urlsToCache = [
-    '/Lageplan/',
-    '/Lageplan/index.html',
-    '/Lageplan/style.css',
-    '/Lageplan/script.js',
-    '/Lageplan/Lageplan_full.png', // Neue Datei
-    '/Lageplan/Lageplan_low.png',  // Neue Datei
-    '/Lageplan/Speisekarte_full.png', // Neue Datei
-    '/Lageplan/Speisekarte_low.png',  // Neue Datei
-    '/Lageplan/manifest.json',
-    '/Lageplan/HalloweenSchrift.otf',
+    '/Event-Guide/',
+    '/Event-Guide/index.html',
+    '/Event-Guide/style.css',
+    '/Event-Guide/script.js',
+    '/Event-Guide/logo.png',
+    '/Event-Guide/Lageplan_full.png',
+    '/Event-Guide/Lageplan_low.png',
+    '/Event-Guide/Speisekarte_full.png',
+    '/Event-Guide/Speisekarte_low.png',
+    '/Event-Guide/manifest.json',
+    '/Event-Guide/HalloweenSchrift.otf',
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css'
 ];
 
@@ -22,6 +23,7 @@ self.addEventListener('install', event => {
         caches.open(CACHE_NAME)
             .then(cache => {
                 console.log('Cache geöffnet');
+                // Wichtig: Auch die logo.png zum Cache hinzufügen
                 return cache.addAll(urlsToCache);
             })
     );
