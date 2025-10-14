@@ -101,39 +101,38 @@ a.action-button {
     padding-bottom: 8px;
 }
 
-/* ### NEU: Styling für die Speisekarte mit Einrückungen ### */
+/* ### NEU: Styling für die Speisekarte mit zentriertem Namen ### */
 .menu-item {
     padding: 8px 0;
     margin: 0;
     border-bottom: 1px dashed #444;
+    display: flex; /* Aktiviert Flexbox */
+    justify-content: space-between;
+    align-items: center; /* Zentriert die Elemente vertikal */
 }
 .menu-item:last-child {
     border-bottom: none;
 }
 .menu-item p {
-    display: flex;
-    justify-content: space-between;
     margin: 0;
 }
-.menu-item span:first-child {
+.multi-price .main-item {
     text-align: left;
     padding-right: 15px;
-}
-.menu-item span:last-child {
-    text-align: right;
     font-weight: bold;
-    white-space: nowrap;
-}
-.multi-price .main-item {
-    font-weight: bold;
-    margin-bottom: 5px;
 }
 .multi-price .sub-item {
-    padding-left: 20px; /* Die Einrückung */
+    display: flex;
+    justify-content: space-between;
+    width: 120px; /* Feste Breite für die Preis-Spalte */
     font-size: 1em;
 }
+.multi-price .sub-item span:last-child {
+    font-weight: bold;
+}
 .special-offer {
-    justify-content: center;
+    flex-grow: 1; /* Nimmt den ganzen Platz ein */
+    text-align: center;
     font-style: normal;
     font-size: 1.1em;
     color: #e0e0e0;
