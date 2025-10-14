@@ -66,7 +66,8 @@ p { margin: 0 0 1em 0; font-size: 1.1em; }
 
 .action-button {
     background-color: #cc0001;
-    color: #000; 
+    /* ### GEÄNDERT: Schriftfarbe auf Weiß ### */
+    color: #fff; 
     font-family: 'Halloween Schrift', cursive;
     font-size: 1.8em;
     font-weight: bold;
@@ -104,7 +105,7 @@ a.action-button {
 .text-content-section p {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Vertikale Zentrierung */
+    align-items: center;
     padding: 8px 0;
     margin: 0;
     border-bottom: 1px dashed #444;
@@ -118,16 +119,14 @@ a.action-button {
 }
 .text-content-section span:last-child {
     text-align: right;
-    /* ### GEÄNDERT: Schriftstärke auf normal gesetzt ### */
     font-weight: normal; 
     white-space: nowrap;
 }
 
-/* ### NEU: Stil für den kleineren Hinweis-Text ### */
 .sub-text {
-    display: block; /* Eigene Zeile erzwingen */
-    font-size: 0.8em; /* Kleinere Schrift */
-    color: #aaa; /* Unauffälligere Farbe */
+    display: block;
+    font-size: 0.8em;
+    color: #aaa;
     font-weight: normal;
 }
 
