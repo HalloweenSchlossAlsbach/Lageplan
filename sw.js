@@ -1,19 +1,19 @@
-// Cache-Version erhöht
-const CACHE_NAME = 'event-info-cache-v6';
+// ### GEÄNDERT: Cache-Version erhöht ###
+const CACHE_NAME = 'event-info-cache-v7';
 
+// ### GEÄNDERT: Alle Pfade auf "QR-Jagt" aktualisiert ###
 const urlsToCache = [
-    '/Event-Guide/',
-    '/Event-Guide/index.html',
-    '/Event-Guide/style.css',
-    '/Event-Guide/script.js',
-    '/Event-Guide/logo.png',
-    '/Event-Guide/Lageplan_full.png',
-    '/Event-Guide/Lageplan_low.png',
-    /* ### NEU: Regelwerk-Bilder zum Cache hinzufügen ### */
-    '/Event-Guide/Regelwerk_full.png',
-    '/Event-Guide/Regelwerk_low.png',
-    '/Event-Guide/manifest.json',
-    '/Event-Guide/HalloweenSchrift.otf',
+    '/QR-Jagt/',
+    '/QR-Jagt/index.html',
+    '/QR-Jagt/style.css',
+    '/QR-Jagt/script.js',
+    '/QR-Jagt/logo.png',
+    '/QR-Jagt/Lageplan_full.png',
+    '/QR-Jagt/Lageplan_low.png',
+    '/QR-Jagt/Regelwerk_full.png',
+    '/QR-Jagt/Regelwerk_low.png',
+    '/QR-Jagt/manifest.json',
+    '/QR-Jagt/HalloweenSchrift.otf',
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css'
 ];
 
