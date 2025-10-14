@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halloween Schloss Alsbach - Info</title>
+    <title>Halloween Schloss Alsbach - Event-Guide</title>
     
     <link rel="stylesheet" href="style.css">
     
@@ -17,7 +17,7 @@
 
     <header>
         <img src="logo.png" alt="Halloween Schloss Alsbach Logo" class="header-logo">
-        <h1>Willkommen!</h1>
+        <h1>Event-Guide</h1>
     </header>
 
     <main>
@@ -30,10 +30,65 @@
             </picture>
         </section>
 
-        <section class="view-section">
-            <button id="menu-btn" class="action-button">Speisekarte</button>
+        <section class="view-section text-content-section">
+            <h2>Speisekarte</h2>
+            <div class="menu">
+                <h3>Speisen</h3>
+                <p><span>Bratwurst</span><span>5,00 €</span></p>
+                <p><span>Rindbratwurst</span><span>5,00 €</span></p>
+                <p><span>Kürbissuppe</span><span>7,00 €</span></p>
+                <p><span>Kürbisauflauf</span><span>8,00 €</span></p>
+
+                <h3>Alkoholfreie Getränke</h3>
+                <p><span>Cola, Sprite, Apfelschorle (0,3l)</span><span>3,00 €</span></p>
+                <p><span>Cola, Sprite, Apfelschorle (0,5l)</span><span>4,50 €</span></p>
+                <p><span>Wasser Still / Klassik (0,3l)</span><span>2,50 €</span></p>
+                <p><span>Wasser Still / Klassik (0,5l)</span><span>4,00 €</span></p>
+                <p><span>Fruchtpunsch (0,2l)</span><span>3,50 €</span></p>
+
+                <h3>Alkoholische Getränke</h3>
+                <p><span>Pils / Radler vom Fass (0,3l)</span><span>4,00 €</span></p>
+                <p><span>Pils / Radler vom Fass (0,5l)</span><span>6,00 €</span></p>
+                <p><span>Weißwein (0,3l)</span><span>6,00 €</span></p>
+                <p><span>Weißweinschorle süß/sauer (0,3l)</span><span>5,00 €</span></p>
+                <p><span>Weißweinschorle süß/sauer (0,5l)</span><span>8,00 €</span></p>
+                <p><span>Aperol Spritz (0,3l)</span><span>6,00 €</span></p>
+                <p><span>Apfelwein pur/süß/sauer/Cola (0,3l)</span><span>3,50 €</span></p>
+                <p><span>Apfelwein pur/süß/sauer/Cola (0,5l)</span><span>5,00 €</span></p>
+                <p><span>Glühwein (0,2l)</span><span>3,50 €</span></p>
+                <p><span>Likörspritze</span><span>3,00 €</span></p>
+                <p class="special-offer"><span>(Bei 10 Spritzen gibt's 1 gratis!)</span></p>
+            </div>
         </section>
         
+        <section class="view-section text-content-section">
+            <h2>Showzeiten</h2>
+            <div class="show-times">
+                <h3>Freitag & Samstag</h3>
+                <p><span>20:30 Uhr</span><span>Atomic Zombi Dance</span></p>
+                <p><span>21:30 Uhr</span><span>Luzifers Flüstern</span></p>
+                <p><span>22:30 Uhr</span><span>Atomic Zombi Dance</span></p>
+                <p><span>23:45 Uhr</span><span>Flammen des Grauens</span></p>
+                <p><span>00:00 Uhr</span><span>Demaskierung der Monster</span></p>
+
+                <h3>Sonntag</h3>
+                <p><span>14:30 Uhr</span><span>Atomic Zombi Dance</span></p>
+                <p><span>15:30 Uhr</span><span>Luzifers Flüstern</span></p>
+                <p><span>16:30 Uhr</span><span>Atomic Zombi Dance</span></p>
+                <p><span>17:45 Uhr</span><span>Flammen des Grauens</span></p>
+                <p><span>18:00 Uhr</span><span>Demaskierung der Monster</span></p>
+            </div>
+        </section>
+
+        <section class="view-section">
+            <h2>Regelwerk</h2>
+            <p>Tippe auf die Regeln, um sie zu vergrößern.</p>
+            <picture>
+                <source media="(min-width: 1px) and (not (prefers-reduced-data))" srcset="Regelwerk_full.png">
+                <img src="Regelwerk_low.png" alt="Regelwerk der Veranstaltung" class="site-plan" id="rules-img">
+            </picture>
+        </section>
+
         <section class="view-section">
             <a href="https://halloweenschlossalsbach.github.io/Scan/" class="action-button" target="_blank">Zur Scan Challenge</a>
         </section>
@@ -49,18 +104,12 @@
         </div>
     </footer>
 
-    <div id="menu-overlay" class="overlay">
-        <span class="close-btn">×</span>
-        <div class="overlay-content">
-            <picture>
-                <source media="(min-width: 1px) and (not (prefers-reduced-data))" srcset="Speisekarte_full.png">
-                <img src="Speisekarte_low.png" alt="Speisekarte" class="menu-image">
-            </picture>
-        </div>
-    </div>
-    
     <div id="plan-zoom-overlay" class="overlay">
          <img src="Lageplan_full.png" alt="Vergrößerter Lageplan" class="zoom-image">
+    </div>
+    
+    <div id="rules-zoom-overlay" class="overlay">
+         <img src="Regelwerk_full.png" alt="Vergrößertes Regelwerk" class="zoom-image">
     </div>
 
     <script src="script.js"></script>
