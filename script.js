@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if ('serviceWorker' in navigator) {
         // ### GEÄNDERT: Neuer Repository-Name ###
-        navigator.serviceWorker.register('/QR-Jagt/sw.js')
+        navigator.serviceWorker.register('/QR-Jagd/sw.js')
             .then(registration => {
                 console.log('Service Worker erfolgreich registriert:', registration);
             })
