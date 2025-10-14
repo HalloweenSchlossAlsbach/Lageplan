@@ -101,57 +101,32 @@ a.action-button {
     padding-bottom: 8px;
 }
 
-/* ### NEU: Styling für die Speisekarte mit zentriertem Namen ### */
-.menu-item {
+.text-content-section p {
+    display: flex;
+    justify-content: space-between;
     padding: 8px 0;
     margin: 0;
     border-bottom: 1px dashed #444;
-    display: flex; /* Aktiviert Flexbox */
-    justify-content: space-between;
-    align-items: center; /* Zentriert die Elemente vertikal */
 }
-.menu-item:last-child {
+.text-content-section p:last-child {
     border-bottom: none;
 }
-.menu-item p {
-    margin: 0;
-}
-.multi-price .main-item {
+.text-content-section span:first-child {
     text-align: left;
     padding-right: 15px;
+}
+.text-content-section span:last-child {
+    text-align: right;
     font-weight: bold;
+    white-space: nowrap;
 }
-.multi-price .sub-item {
-    display: flex;
-    justify-content: space-between;
-    width: 120px; /* Feste Breite für die Preis-Spalte */
-    font-size: 1em;
-}
-.multi-price .sub-item span:last-child {
-    font-weight: bold;
-}
-.special-offer {
-    flex-grow: 1; /* Nimmt den ganzen Platz ein */
-    text-align: center;
+
+.text-content-section .special-offer {
+    justify-content: center;
     font-style: normal;
     font-size: 1.1em;
     color: #e0e0e0;
     font-weight: bold;
-}
-
-/* Styling für Showzeiten bleibt gleich */
-.show-times p {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 0;
-    margin: 0;
-    border-bottom: 1px dashed #444;
-}
-.show-times p:last-of-type {
-    border-bottom: none;
-}
-.show-times span:first-child {
-    padding-right: 15px;
 }
 
 footer {
