@@ -101,33 +101,58 @@ a.action-button {
     padding-bottom: 8px;
 }
 
-.text-content-section p {
+/* ### NEU: Styling für die Speisekarte mit Einrückungen ### */
+.menu-item {
+    padding: 8px 0;
+    margin: 0;
+    border-bottom: 1px dashed #444;
+}
+.menu-item:last-child {
+    border-bottom: none;
+}
+.menu-item p {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+.menu-item span:first-child {
+    text-align: left;
+    padding-right: 15px;
+}
+.menu-item span:last-child {
+    text-align: right;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.multi-price .main-item {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.multi-price .sub-item {
+    padding-left: 20px; /* Die Einrückung */
+    font-size: 1em;
+}
+.special-offer {
+    justify-content: center;
+    font-style: normal;
+    font-size: 1.1em;
+    color: #e0e0e0;
+    font-weight: bold;
+}
+
+/* Styling für Showzeiten bleibt gleich */
+.show-times p {
     display: flex;
     justify-content: space-between;
     padding: 8px 0;
     margin: 0;
     border-bottom: 1px dashed #444;
 }
-.text-content-section p:last-child {
+.show-times p:last-of-type {
     border-bottom: none;
 }
-.text-content-section span:first-child {
-    text-align: left;
+.show-times span:first-child {
     padding-right: 15px;
-}
-.text-content-section span:last-child {
-    text-align: right;
-    font-weight: bold;
-    white-space: nowrap;
-}
-
-/* ### GEÄNDERT: Stil für den Angebots-Text ### */
-.text-content-section .special-offer {
-    justify-content: center; /* Text bleibt zentriert */
-    font-style: normal; /* Keine Kursivschrift mehr */
-    font-size: 1.1em; /* Gleiche Größe wie andere Einträge */
-    color: #e0e0e0; /* Gleiche Farbe wie andere Einträge */
-    font-weight: bold; /* Fett gedruckt zur Hervorhebung */
 }
 
 footer {
