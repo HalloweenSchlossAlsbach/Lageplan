@@ -104,6 +104,7 @@ a.action-button {
 .text-content-section p {
     display: flex;
     justify-content: space-between;
+    align-items: center; /* Vertikale Zentrierung */
     padding: 8px 0;
     margin: 0;
     border-bottom: 1px dashed #444;
@@ -117,16 +118,17 @@ a.action-button {
 }
 .text-content-section span:last-child {
     text-align: right;
-    font-weight: bold;
+    /* ### GEÄNDERT: Schriftstärke auf normal gesetzt ### */
+    font-weight: normal; 
     white-space: nowrap;
 }
 
-.text-content-section .special-offer {
-    justify-content: center;
-    font-style: normal;
-    font-size: 1.1em;
-    color: #e0e0e0;
-    font-weight: bold;
+/* ### NEU: Stil für den kleineren Hinweis-Text ### */
+.sub-text {
+    display: block; /* Eigene Zeile erzwingen */
+    font-size: 0.8em; /* Kleinere Schrift */
+    color: #aaa; /* Unauffälligere Farbe */
+    font-weight: normal;
 }
 
 footer {
